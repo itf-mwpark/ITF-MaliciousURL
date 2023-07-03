@@ -5,13 +5,12 @@ import json
 
 app = Flask(__name__)
 
-malicious_file = os.environ.get("MALICIOUS_FILE_PATH", "./files/mimikatz.txt")
+malicious_file = os.environ.get("MALICIOUS_FILE_PATH", "./files/94fa80c133c152abe46e0f6f20c06b1f27c225f2723915596af2ad8499fa4ff0.exe")
 none_malicious_file = os.environ.get("NONE_MALICIOUS_FILE_PATH", "./files/none_malicious_file.txt")
 
 @app.route('/')
 def home():
     remote_addr = request.remote_addr
-    
     try:
         api_param = {
             "serviceKey": "WV8lzb2Hk0HQZV08PpT2CxFSCGm8Nz5cZURni1mvK+zd/72mRL9b68qKw7CmJxVCHM1QOrp1uR84YL8JuB4O+g==",
