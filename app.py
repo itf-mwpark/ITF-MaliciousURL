@@ -29,4 +29,4 @@ if __name__ == '__main__':
     print(f"[*] Malicious file is --> {malicious_file}")
     print(f"[*] None malicious file is --> {none_malicious_file}")
     
-    app.run(host='0.0.0.0', port=8000)
+    app.run(host='0.0.0.0', port=80)
